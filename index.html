@@ -22,42 +22,37 @@
   <div class="title slide" id="title">
     <h2>Data ownership and control<br> in connected smart cities</h2>
     <p class="author">Ruben Verborgh</p>
+    <p class="affiliation">Ghent University – imec</p>
   </div>
 
   <div class="text slide" id="intro">
     <p>
-      The Solid ecosystem enables you
-      to use the apps you need,
-      <span class="next">while storing your data wherever you want.</span>
+      Smart cities are driven by<br>
+      data from many sources.
     </p>
     <p class="next">
-      You own your data,
-      <span class="next">and share it<br>
-      with the apps and people you choose.</span>
+      The Solid ecosystem enables us<br>
+      to connect that data in a trusted way,<br>
+      ensuring people remain in control.
     </p>
   </div>
 
-  <div class="toc slide" id="toc">
-    <h2>Solid: Linked Data for personal data management</h2>
+  <div class="slide" id="ruben">
+    <h2>
+      I am Ruben Verborgh, computer scientist<br>
+      and contributor to the Solid ecosystem.
+    </h2>
     <ul>
-      <li><a href="#toc-solid">The Solid ecosystem</a></li>
-      <li><a href="#toc-linkeddata">The role of Linked Data</a></li>
-      <li><a href="#toc-devx">The developer experience</a></li>
-    </ul>
-  </div>
-
-  <div class="toc slide" id="toc-solid">
-    <h2>Solid: Linked Data for personal data management</h2>
-    <ul>
-      <li class="current"><a href="#toc-solid">The Solid ecosystem</a></li>
-      <li><a href="#toc-linkeddata">The role of Linked Data</a></li>
-      <li><a href="#toc-devx">The developer experience</a></li>
+      <li>professor of Semantic Web technology<br>
+        at Ghent University – imec, Belgium</li>
+      <li>Solid technology advocate<br>
+        at Inrupt inc., USA</li>
     </ul>
   </div>
 
   <div class="slide" id="decentralized-data">
     <h2>
-      You can choose where you store<br>
+      With Solid, you choose where you store<br>
       every single piece of data you produce.
     </h2>
     <figure class="cover height margin">
@@ -82,26 +77,6 @@
     </h2>
     <figure class="cover height margin">
       <img src="images/data-and-app-markets.svg" alt="">
-    </figure>
-  </div>
-
-  <div class="slide" id="requests">
-    <h2>
-      The traditional way of building apps<br>
-      does not work well with decentralization.
-    </h2>
-    <figure class="cover width margin">
-      <img src="images/request-based-interaction.svg" alt="">
-    </figure>
-  </div>
-
-  <div class="slide" id="queries">
-    <h2>
-      Building apps over decentralized data<br>
-      requires different app techniques.
-    </h2>
-    <figure class="cover width margin">
-      <img src="images/query-based-interaction.svg" alt="">
     </figure>
   </div>
 
@@ -150,67 +125,6 @@
     </ul>
   </div>
 
-  <div class="slide" id="current-state">
-    <h2>
-      The Solid server and several apps exist<br>
-      and are usable for developers.
-    </h2>
-    <ul>
-      <li>
-        <a href="https://github.com/solid/node-solid-server/">Solid server</a>
-        <ul class="next">
-          <li>store your data online with access control</li>
-          <li>
-            free storage at
-            <a href="https://solid.community/">solid.community</a>
-            and
-            <a href="https://inrupt.net/">inrupt.net</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        apps
-        <ul class="next inline">
-          <li><a href="https://github.com/linkeddata/mashlib">data browser</a></li>
-          <li>contacts</li>
-          <li>photos</li>
-          <li>meeting organizer</li>
-          <li>…</li>
-        </ul>
-      </li>
-      <li>
-        libraries
-        <ul class="next inline">
-          <li><a href="https://github.com/solid/solid-auth-client">authentication</a></li>
-          <li><a href="https://github.com/linkeddata/rdflib.js/">data processing</a></li>
-          <li>…</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <div class="slide" id="inrupt">
-    <h2>
-      The Solid ecosystem is backed by Inrupt,<br>
-      which aims to accelerate development.
-    </h2>
-    <ul>
-      <li class="next">open up the ecosystem for all</li>
-      <li class="next">maintain common building blocks as open source</li>
-      <li class="next">create tooling for developers</li>
-      <li class="next">offer services and apps</li>
-    </ul>
-  </div>
-
-  <div class="toc slide" id="toc-timeline">
-    <h2>Solid: Linked Data for personal data management</h2>
-    <ul>
-      <li><a href="#toc-solid">The Solid ecosystem</a></li>
-      <li class="current"><a href="#toc-linkeddata">The role of Linked Data</a></li>
-      <li><a href="#toc-devx">The developer experience</a></li>
-    </ul>
-  </div>
-
   <div class="slide" id="linkeddata">
     <h2>
       Linked Data in the RDF model<br>
@@ -239,13 +153,10 @@
     </h2>
     <pre><code><span class="prefix">PREFIX as: &lt;https://www.w3.org/ns/activitystreams#&gt;
 PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
-&lt;#ruben-likes-iswc2018&gt; a as:Like;
+&lt;#ruben-likes-cscc2019&gt; a as:Like;
   as:actor  <mark>&lt;https://ruben.verborgh.org/profile/#me&gt;</mark>;
-  as:object <mark>&lt;http://iswc2018.semanticweb.org/#this&gt;</mark>;
-  as:published "2018-10-08T21:00:00Z"^^xsd:dateTime.</code></pre>
-    <p>
-      <strong>Link following</strong> is crucial to make this work.
-    </p>
+  as:object <mark>&lt;https://oasc.events.idloom.com/connected-smart-cities-conference-2019#this&gt;</mark>;
+  as:published "2019-01-17T12:00:00Z"^^xsd:dateTime.</code></pre>
   </div>
 
   <div class="slide" id="semantics">
@@ -255,10 +166,10 @@ PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
     </h2>
     <pre><code><span class="prefix">PREFIX as: &lt;https://www.w3.org/ns/activitystreams#&gt;
 PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
-&lt;#ruben-likes-iswc2018&gt; <mark>a as:Like;</mark>
+&lt;#ruben-likes-cscc2019&gt; <mark>a as:Like;</mark>
   <mark>as:actor</mark>  &lt;https://ruben.verborgh.org/profile/#me&gt;;
-  <mark>as:object</mark> &lt;http://iswc2018.semanticweb.org/#this&gt;;
-  <mark>as:published</mark> "2018-10-08T21:00:00Z"^^xsd:dateTime.</code></pre>
+  <mark>as:object</mark> &lt;https://oasc.events.idloom.com/connected-smart-cities-conference-2019#this&gt;;
+  <mark>as:published</mark> "2019-01-17T12:00:00Z"^^xsd:dateTime.</code></pre>
   </div>
 
   <div class="slide" id="integration">
@@ -268,170 +179,62 @@ PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
     </h2>
     <pre><code><span class="prefix">PREFIX as: &lt;https://www.w3.org/ns/activitystreams#&gt;
 PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
-&lt;#ruben-likes-iswc2018&gt; a as:Like;
+&lt;#ruben-likes-cscc2019&gt; a as:Like;
   as:actor  &lt;https://ruben.verborgh.org/profile/#me&gt;;
-  as:object &lt;http://iswc2018.semanticweb.org/#this&gt;;
-  as:published "2018-10-08T21:00:00Z"^^xsd:dateTime.
-&lt;#tim-likes-iswc2018&gt; a as:Like;
-  as:actor  &lt;https://www.w3.org/People/Berners-Lee/card#i&gt;;
-  as:object &lt;http://iswc2018.semanticweb.org/#this&gt;;
-  as:published "2018-10-08T21:00:00Z"^^xsd:dateTime.</code></pre>
+  as:object &lt;https://oasc.events.idloom.com/connected-smart-cities-conference-2019#this&gt;;
+  as:published "2019-01-17T12:00:00Z"^^xsd:dateTime.
+&lt;#carol-likes-cscc2019&gt; a as:Like;
+  as:actor  &lt;https://www.example.org/people/carol#i&gt;;
+  as:object &lt;https://oasc.events.idloom.com/connected-smart-cities-conference-2019#this&gt;;
+  as:published "2019-01-17T12:00:00Z"^^xsd:dateTime.</code></pre>
   </div>
 
-  <div class="slide" id="research">
+  <div class="slide" id="conclusion">
     <h2>
-      Decentralized Linked Data for people<br>
-      activates many options for research.
+      With Solid, the source of truth<br>
+      is the original data source.
     </h2>
+    <ul>
+      <li>trust about data origin</li>
+      <li>trust about data privacy</li>
+      <li>trust about data control</li>
+    </ul>
+  </div>
+
+  <div class="slide" id="idlab">
+    <h2>
+      At Ghent University – imec, we are actively<br>
+      looking to collaborate on smart cities.
+    </h2>
+    <p>
+      Some of the smart cities projects we’re working on:
+    </p>
     <ul>
       <li>
-        data transformation, modeling, and reasoning
-        <ul class="inline">
-          <li>getting RDF out of existing applications</li>
-          <li>on-the-fly conversion between ontologies</li>
-          <li>…</li>
+        <a href="https://smart.flanders.be/">Smart Flanders</a>
+        <ul>
+          <li>transforming 13 cities in Flanders</li>
         </ul>
       </li>
       <li>
-        query evaluation
-        <ul class="inline">
-          <li>traversal-based querying</li>
-          <li>large-scale federation</li>
-          <li>…</li>
+        <a href="https://www.imec-int.com/en/what-we-offer/research-portfolio/essence">ESSENCE</a>
+        <ul>
+          <li>storytelling in the sentient city</li>
         </ul>
       </li>
       <li>
-        policies and licenses
-        <ul class="inline">
-          <li>access rights for people and apps</li>
-          <li>…</li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-
-  <div class="toc slide" id="toc-demo">
-    <h2>Solid: Linked Data for personal data management</h2>
-    <ul>
-      <li><a href="#toc-solid">The Solid ecosystem</a></li>
-      <li><a href="#toc-linkeddata">The role of Linked Data</a></li>
-      <li class="current"><a href="#toc-devx">The developer experience</a></li>
-    </ul>
-  </div>
-
-  <div class="slide" id="legacy">
-    <h2>
-      <q>You’re using Semantic Web technology?<br>
-         Developers have never wanted it.</q>
-    </h2>
-    <ul>
-      <li class="next">
-        Today’s new generation of front-end developers<br>
-        are not burdened by the inheritance of the past.
-        <ul class="inline">
-          <li>XML</li>
-          <li>Java</li>
-          <li>Big Data</li>
-          <li>…</li>
-        </ul>
-      </li>
-      <li class="next">
-        They just want to build cool things.
+        <a href="https://www.mos2s.eu/">MOS2S</a>
         <ul>
-          <li>Thanks to Solid, they don’t need to harvest data.</li>
-        </ul>
-      </li>
-      <li class="next">
-        They <em>like</em> Linked Data when show it to them!
-      </li>
-    </ul>
-  </div>
-
-  <div class="slide" id="developers">
-    <h2>
-      Can developers build Linked Data apps<br>
-      without exposure to raw RDF?
-    </h2>
-    <ul>
-      <li class="next">
-        We could create object-oriented abstractions<br>
-        for specific concepts and domains.
-        <ul>
-          <li>
-            Forcing data into specific shapes<br>
-            hides the benefits of Linked Data.
-          </li>
-        </ul>
-      </li>
-      <li class="next">
-        We need to create new developer experiences<br>
-        that make programming with Linked Data <em>fun</em>.
-        <ul>
-          <li>
-            How to get them to think in graphs?
-          </li>
+          <li>data-driven journalism on smart cities</li>
         </ul>
       </li>
     </ul>
   </div>
 
-  <div class="slide" id="ldflex">
-    <h2>
-      <em>LDflex</em> is a domain-specific language<br>
-      for traversing Linked Data graphs.
-    </h2>
-    <pre><code><strong>const</strong> person = node('https://me.example.org/#me')</code></pre>
-    <pre class="next"><code>person.label
-person.friends.firstName</code></pre>
-    <pre class="next"><code><strong>const</strong> label = <strong>await</strong> person.label</code></pre>
-    <pre class="next"><code><strong>for await</strong> (<strong>const</strong> name <strong>of</strong> person.friends.firstName)
-  console.log(name)</code></pre>
-  </div>
-
-  <div class="slide" id="ldflex-sparql">
-    <h2>
-      <em>LDflex</em> uses SPARQL under the hood<br>
-      and invokes a client-side query engine.
-    </h2>
-    <pre><code><strong>const</strong> person = node('https://me.example.org/#me')
-<strong>const</strong> query = <strong>await</strong> person.friends.firstName.sparql</code></pre>
-    <pre class="next"><code><strong>SELECT</strong> ?firstName <strong>WHERE</strong> {
-  &lt;https://me.example.org/#me&gt; foaf:knows ?v0.
-  ?v0 foaf:givenName ?firstName.
-}</code></pre>
-  </div>
-
-  <div class="slide" id="react">
-    <h2>
-      Through <em>React</em> components, we tap into<br>
-      a large front-end developer community.
-    </h2>
-    <pre><code>&lt;div&gt;
-  &lt;h1&gt;Solid App&lt;/h1&gt;
-  &lt;AuthButton popup="popup.html"/&gt;
-  &lt;LoggedInPane&gt;
-    &lt;p&gt;Welcome back, &lt;DataField data="user.firstName"/&gt;.&lt;/p&gt;
-  &lt;/LoggedInPane&gt;
-  &lt;LoggedOutPane&gt;
-    &lt;p&gt;You are logged out.&lt;/p&gt;
-  &lt;/LoggedOutPane&gt;
-&lt;/div&gt;</code></pre>
-  </div>
-
-  <div class="toc slide" id="recap">
-    <h2>Solid: Linked Data for personal data management</h2>
-    <ul>
-      <li><a href="#toc-solid">The Solid ecosystem</a></li>
-      <li><a href="#toc-linkeddata">The role of Linked Data</a></li>
-      <li><a href="#toc-devx">The developer experience</a></li>
-    </ul>
-  </div>
-
-  <div class="slide" id="end">
-    <h2>
-      Join us at
-      <a href="https://solid.inrupt.com/">solid.inrupt.com</a>!
-    </h2>
+  <div class="title slide" id="end">
+    <h2>Data ownership and control<br> in connected smart cities</h2>
+    <p class="author"><a href="https://twitter.com/RubenVerborgh">@RubenVerborgh</a></p>
+    <p class="affiliation">Ghent University – imec</p>
   </div>
 
   <footer>
