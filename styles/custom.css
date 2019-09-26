@@ -16,17 +16,12 @@ p.venue {
   height: 66%;
 }
 
-.slide h2.shout {
-  font-size: 3.2em;
-  line-height: 1.2;
-}
-
 .slide.toc h2 {
   display: none;
 }
 
 .text.slide p {
-  font-size: 1.5em;
+  font-size: 1.4em;
   line-height: 1.5;
   letter-spacing: -.5px;
   font-weight: bold;
